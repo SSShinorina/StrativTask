@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search value</title>
+</head>
+<body>
+
+</body>
+</html>
+<h1>Search Results</h1>
+
+<ul>
+  {% for border in object_list %}
+    <li>
+      {{ border.name }}
+    </li>
+  {% endfor %}
+    <form action='details' method='GET'>
+<button type='submit'>Details</button>
+</form>
+
+</ul>

@@ -1,0 +1,15 @@
+{% load render_table from django_tables2 %}
+<html>
+    <head>
+        <title>List of Countries</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <form action="{% url 'search' %}" method="get">
+        <input name="q" type="text" placeholder="Search...">
+    </form>
+    <body>
+        {% render_table table %}
+
+    </body>
+
+</html>

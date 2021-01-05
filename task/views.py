@@ -1,9 +1,14 @@
 import coreapi
-from django.http import HttpResponse
-from rest_framework import viewsets, filters
-from task.models import Details, Language, Border
+from django.db.models import Q
 
+from django.http import HttpResponse
+from django.views.generic import ListView
+from django_tables2 import SingleTableView
+
+from task.models import Details, Language, Border
+from rest_framework import viewsets, filters
 from assignment.serializers import LanguageSerializer, BorderSerializer, DetailsSerializer
+from task.table import CountryTable, DetailsTable
 
 
 class Get_details(object):
@@ -47,41 +52,25 @@ class DetailsViewSet(viewsets.ModelViewSet):
     serializer_class = DetailsSerializer
 
 
-# class SpeakViewSet(viewsets.ModelViewSet):
-#     queryset = Speak_language.objects.filter(name='Bangla')
-#     serializer_class = SpeakSerializer
+class CountryListView(SingleTableView):
+    model = Details
+    table_class = CountryTable
+    template_name = 'country.html'
 
-#
-# @api_view(['PUT', 'DELETE'])
-# def border(request, pk):
-#     try:
-#         queryset = Border.objects.get(pk=pk)
-#     except Border.DoesNotExist:
-#         return Response(status=status.HTTP_404_NOT_FOUND)
-#
-#     if request.method == 'PUT':
-#         serializer = BorderSerializer(queryset, data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-#
-#     elif request.method == 'DELETE':
-#         border.delete()
-#         return Response(status=status.HTTP_204_NO_CONTENT)
 
-#
-# class BorderAPIViewTest(ListCreateAPIView):
-#     """
-#     API view to retrieve list of posts or create new
-#     """
-#     serializer_class = BorderSerializer
-#     queryset = Border.objects.active()
-#
-#
-# class BorderAPIViewTest(RetrieveUpdateDestroyAPIView):
-#     """
-#     API view to retrieve, update or delete post
-#     """
-#     serializer_class = BorderSerializer
-#     queryset = Border.objects.all()
+class CountryDetailsView(SingleTableView):
+    model = Details
+    table_class = DetailsTable
+    template_name = 'details.html'
+
+
+class SearchResultsView(ListView):
+    model = Border
+    template_name = 'search.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Border.objects.filter(
+            Q(name__icontains=query)
+        )
+        return object_list

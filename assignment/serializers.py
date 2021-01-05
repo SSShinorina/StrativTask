@@ -28,12 +28,3 @@ class DetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Details
         fields = "__all__"
-
-
-# class SpeakSerializer(serializers.ModelSerializer):
-#     name = serializers.PrimaryKeyRelatedField(queryset=Language.objects.all(), many=True)
-#     border = serializers.PrimaryKeyRelatedField(queryset=Border.objects.all(), many=True)
-#
-#     class Meta:
-#         model = Speak_language
-#         fields = "__all__"

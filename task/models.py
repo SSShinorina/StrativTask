@@ -1,10 +1,6 @@
 from django.db import models
 
 
-# Create your models here.name, alphacode2, capital, population, timezone, flag, languages and neighbouring
-# countries.
-
-
 class Border(models.Model):
     name = models.CharField(max_length=255)
 
@@ -23,11 +19,6 @@ class Details(models.Model):
     flag = models.ImageField(upload_to='', null=True)
     languages = models.ForeignKey(Language, on_delete=models.CASCADE, related_name='language')
     borders = models.ManyToManyField(Border)
-
-#
-# class Speak_language(models.Model):
-#     name = models.ManyToManyField(Language)
-#     border = models.ManyToManyField(Border)
 
 
 class Get(models.Model):

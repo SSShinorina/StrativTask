@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e316c92-d091-45e9-921a-29baadab8060" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/assignment/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/assignment/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/assignment/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/assignment/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/assignment/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/assignment/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/migrations/0002_auto_20210102_1715.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/migrations/0003_get.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/task/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,10 +35,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\startiv\template" />
+      <recent name="E:\startiv\task" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -86,17 +81,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1609655356841" />
-    <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1609585443128">
+    <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1609782774301">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="603" y="201" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609585443128" />
+    <state x="603" y="201" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609782774301" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1609607416572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609607416572" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1609738453760">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1609778553834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1609738453760" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1609778553834" />
   </component>
 </project>
