@@ -4,10 +4,10 @@
     <list default="true" id="6e316c92-d091-45e9-921a-29baadab8060" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

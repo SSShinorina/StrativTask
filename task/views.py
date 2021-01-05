@@ -7,9 +7,9 @@ from django_tables2 import SingleTableView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework.authtoken.models import Token
-from task.models import Details, Language, Border
 from task.table import CountryTable, DetailsTable
 from rest_framework import viewsets, filters, status
+from task.models import CountryDetails, Language, Border, GetData
 from assignment.serializers import LanguageSerializer, BorderSerializer, DetailsSerializer, LoginSerializer
 
 
@@ -22,10 +22,6 @@ class Login(APIView):
             usr = serializer.validated_data['user']
             tok, created = Token.objects.get_or_create(user=usr)
             return Response({'token': tok.key}, status=status.HTTP_200_OK)
-
-
-class Get_details(object):
-    pass
 
 
 def home(request):
@@ -41,8 +37,8 @@ def home(request):
     languages = data.get("languages")
     borders = data.get("borders")
 
-    details = Get_details.objects.create(name=name, alpha2code=alpha2code, capital=capital, population=population,
-                                         timezone=timezone, flag=flag, languages=languages, borders=borders)
+    details = GetData.objects.create(name=name, alpha2code=alpha2code, capital=capital, population=population,
+                                     timezone=timezone, flag=flag, languages=languages, borders=borders)
     details.save()
 
     return HttpResponse("Get and Save Details")
@@ -61,18 +57,18 @@ class BorderViewSet(viewsets.ModelViewSet):
 
 
 class DetailsViewSet(viewsets.ModelViewSet):
-    queryset = Details.objects.all()
+    queryset = CountryDetails.objects.all()
     serializer_class = DetailsSerializer
 
 
 class CountryListView(SingleTableView):
-    model = Details
+    model = CountryDetails
     table_class = CountryTable
     template_name = 'country.html'
 
 
 class CountryDetailsView(SingleTableView):
-    model = Details
+    model = CountryDetails
     table_class = DetailsTable
     template_name = 'details.html'
 
@@ -87,6 +83,3 @@ class SearchResultsView(ListView):
             Q(name__icontains=query)
         )
         return object_list
-
-
-

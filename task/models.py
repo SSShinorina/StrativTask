@@ -10,7 +10,7 @@ class Language(models.Model):
     borders = models.ManyToManyField(Border)
 
 
-class Details(models.Model):
+class CountryDetails(models.Model):
     name = models.CharField(max_length=255)
     alpha2code = models.CharField(max_length=255)
     capital = models.CharField(max_length=255)
@@ -21,7 +21,7 @@ class Details(models.Model):
     borders = models.ManyToManyField(Border)
 
 
-class Get(models.Model):
+class GetData(models.Model):
     name = models.CharField(max_length=255)
     alpha2code = models.CharField(max_length=255)
     capital = models.CharField(max_length=255)
