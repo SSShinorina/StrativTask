@@ -1,14 +1,27 @@
 import coreapi
 from django.db.models import Q
-
 from django.http import HttpResponse
+from rest_framework.views import APIView
 from django.views.generic import ListView
 from django_tables2 import SingleTableView
-
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+from rest_framework.authtoken.models import Token
 from task.models import Details, Language, Border
-from rest_framework import viewsets, filters
-from assignment.serializers import LanguageSerializer, BorderSerializer, DetailsSerializer
 from task.table import CountryTable, DetailsTable
+from rest_framework import viewsets, filters, status
+from assignment.serializers import LanguageSerializer, BorderSerializer, DetailsSerializer, LoginSerializer
+
+
+class Login(APIView):
+    permission_classes = (AllowAny,)
+
+    def post(self, request):
+        serializer = LoginSerializer(data=request.data, context={'request': request})
+        if serializer.is_valid(raise_exception=True):
+            usr = serializer.validated_data['user']
+            tok, created = Token.objects.get_or_create(user=usr)
+            return Response({'token': tok.key}, status=status.HTTP_200_OK)
 
 
 class Get_details(object):
@@ -74,3 +87,6 @@ class SearchResultsView(ListView):
             Q(name__icontains=query)
         )
         return object_list
+
+
+

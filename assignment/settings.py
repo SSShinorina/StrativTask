@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'task',
     'rest_framework',
-    'django_tables2'
+    'django_tables2',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
