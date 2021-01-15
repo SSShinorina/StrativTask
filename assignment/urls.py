@@ -2,12 +2,13 @@ from django.contrib import admin
 from rest_framework import routers
 from django.urls import path, include
 from task.views import LanguageViewSet, BorderViewSet, DetailsViewSet, CountryListView, SearchResultsView, \
-    CountryDetailsView, Login
+    CountryDetailsView, Login, GetDataViewSet
 
 router = routers.DefaultRouter()
 router.register('language', LanguageViewSet, basename='language')
 router.register('border', BorderViewSet, basename='border')
 router.register('detail', DetailsViewSet, basename='detail')
+router.register('data', GetDataViewSet, basename='data')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

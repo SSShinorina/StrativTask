@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from task.models import Language, Border, CountryDetails
+from task.models import Language, Border, CountryDetails, GetData
 from rest_framework.exceptions import AuthenticationFailed
 
 
@@ -33,6 +33,12 @@ class LanguageSerializer(serializers.ModelSerializer):
 class BorderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Border
+        fields = "__all__"
+
+
+class GetDataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GetData
         fields = "__all__"
 
 

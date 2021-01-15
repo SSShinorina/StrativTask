@@ -25,8 +25,4 @@ class GetData(models.Model):
     name = models.CharField(max_length=255)
     alpha2code = models.CharField(max_length=255)
     capital = models.CharField(max_length=255)
-    population = models.IntegerField()
-    timezone = models.DateTimeField()
-    flag = models.ImageField(upload_to='')
-    languages = models.ForeignKey(Language, on_delete=models.CASCADE)
-    borders = models.ManyToManyField(Border)
+
