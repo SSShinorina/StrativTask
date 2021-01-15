@@ -26,6 +26,27 @@ uritemplate==3.0.1
 urllib3==1.26.2
 django-tables2=2.3.3
 
-Need to install these packages. Run using command python manage.py runserver. 
+Need to install these packages. 
+ 
+Run Script: open python shell by "python manage.py shell" and write 
+            1.from task.scripts import *
+            2.resut.status_code
+            3.result.text
+            4.result.json()
+            
+To view data fetches from api: 
+            1. python manage.py runserver
+            2."data": "http://127.0.0.1:8000/data/"
+API Views:
+            1. list of all countries-- http://127.0.0.1:8000/border/,
+            2. details of country api -- http://127.0.0.1:8000/detail/,
+            3. language api --- http://127.0.0.1:8000/language/
+
+Information of country : http://127.0.0.1:8000/country/
+For search country : http://127.0.0.1:8000/country/ (search field)
+For getting details of specific country : http://127.0.0.1:8000/search/ (click details button)
+
+
+Run using command python manage.py runserver. 
 1. For login you need to use \login after the provided  ip address. I created superuser using command line. username : "lenovo" and password : 123
 2. To view the templates you need to use \countries where the desired table exist and search filed.
